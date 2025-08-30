@@ -4,18 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!--Descrição e ligação com css-->
   <title>Three Donuts</title>
   <meta name="description" content="Loja online de donuts deliciosos e coloridos" />
   <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
 
+<!--cabeçário - logo-->
 <header class="site-header">
   <div class="container header-flex" style="position: relative;">
     <h3>Three Donuts</h3>
     <a href="#home" class="logo">
       <img src="imagens/logo .png" alt="Logo da Three Donuts">
     </a>
+  <!--Inicio - botões do cabeçário-->
     <nav class="nav" aria-label="Navegação principal">
       <ul>
         <li><a href="#home">Início</a></li>
@@ -25,7 +29,10 @@
         <li><a href="#carrinho">🛒</a></li>
       </ul>
     </nav>
+   
     <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+  
+  <!--mobile-->
   </div>
   <nav id="mobile-nav" class="mobile-nav" hidden>
     <ul>
@@ -38,10 +45,12 @@
   </nav>
 </header>
 
+<!--Decoração de escorrido/mordida-->
 <div class="decor-mordidas">
   <img src="imagens/escorrido2-Photoroom.png" alt="Decoração mordidas">
 </div>
 
+<!--Apresentação-->
 <main>
   <section id="home" class="hero">
     <div class="container hero-inner">
@@ -64,9 +73,13 @@
     </section>
   </div>
 
+<!--Tabela - horários-->
   <section class="container">
+
     <h2>Horário de Funcionamento</h2>
+
     <table>
+      
       <tr>
         <th>Dia</th>
         <th>Horário</th>
@@ -79,12 +92,16 @@
         <td>Domingo</td>
         <td>Fechado</td>
       </tr>
+    
     </table>
   </section>
 
   <section id="produtos" class="container section grid">
+
     <h2>Nossos Donuts</h2>
     <div class="cards">
+    
+      <!--Produtos-->    
       <article class="card">
         <img src="/imagens/sortidos.png" alt="sortidos" />
         <h3>Donuts sortidos</h3>
@@ -92,6 +109,8 @@
         <strong><p>R$ 24,99</p></strong>
         <button class="btn small">Comprar</button>
       </article>
+    
+    
       <article class="card">
         <img src="imagens/mertilo.png" alt="Mirtilo" />
         <h3>Sonho de mirtilo</h3>
@@ -99,6 +118,8 @@
         <strong><p>R$ 12,50</p></strong>
         <button class="btn small">Comprar</button>
       </article>
+    
+    
       <article class="card">
         <img src="imagens/chocolate com morango.png" alt="Chocolate" />
         <h3>Donut de chocolate com morango</h3>
@@ -106,6 +127,8 @@
         <strong><p>R$ 10,00</p></strong>
         <button class="btn small">Comprar</button>
       </article>
+    
+    
       <article class="card">
         <img src="imagens/hommer.png" alt="Hommer Classic" />
         <h3>Donut Hommer Classic</h3>
@@ -113,6 +136,8 @@
         <strong><p>R$ 7,00</p></strong>
         <button class="btn small">Comprar</button>
       </article>
+    
+    
       <article class="card">
         <img src="imagens/ovomaltine.png" alt="Ovomaltine" />
         <h3>Donuts de Ovomaltine</h3>
@@ -120,6 +145,8 @@
         <strong><p>R$ 14,00</p></strong>
         <button class="btn small">Comprar</button>
       </article>
+    
+    
       <article class="card">
         <img src="imagens/kit ket.png" alt="Kitkat" />
         <h3>Donut de Kitkat</h3>
@@ -127,6 +154,8 @@
         <strong><p>R$ 10,00</p></strong>
         <button class="btn small">Comprar</button>
       </article>
+    
+    
       <article class="card">
         <img src="imagens/m&m.png" alt="MM" />
         <h3>Donut de M&M's</h3>
@@ -134,6 +163,8 @@
         <strong><p>R$ 12,90</p></strong>
         <button class="btn small">Comprar</button>
       </article>
+    
+    
       <article class="card">
         <img src="imagens/oreo.png" alt="Oreo" />
         <h3>Donut de Oreo</h3>
@@ -141,9 +172,11 @@
         <strong><p>R$ 14,50</p></strong>
         <button class="btn small">Comprar</button>
       </article>
+    
     </div>
   </section>
 
+<!--Carrinho de compras-->
   <section id="carrinho" class="container section grid">
     <div class="container hero-inner">
       <h1>Carrinho de compras</h1>
@@ -156,9 +189,13 @@
         <button class="btn-pagamento">Boleto</button>
       </div>
       <button id="btn-pagar" class="btn-pagar">Pagar</button>
+
+
+
     </div>
   </section>
 
+<!--Contato/mensagem-->
   <section id="contato" class="container section">
     <h2>Contato</h2>
     <form id="contact-form" class="form" novalidate>
@@ -172,7 +209,7 @@
       </label>
       <label>
         Mensagem
-        <textarea name="message" rows="4" required placeholder="Escreva sua mensagem"></textarea>
+        <textarea type= "text" name="message" style="display: block; width: 200px;" required placeholder="Escreva sua mensagem"></textarea>
       </label>
       <button type="submit" class="btn">Enviar</button>
       <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
@@ -180,6 +217,7 @@
   </section>
 </main>
 
+<!--Rodapé-->
 <footer class="site-footer">
   <div class="container">
     <p class="small">Feito com amor e muito açúcar</p>
@@ -189,6 +227,7 @@
   </div>
 </footer>
 
+<!--Ligação com javascript-->
 <script src="script.js"></script>
 </body>
 </html>

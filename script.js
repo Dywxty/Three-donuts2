@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ===== Utilidades =====
+  //  Utilidades 
   const fmtBRL = (v) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(v);
 
-  // ===== Ano no rodapé =====
+  //  Ano no rodapé 
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // ===== Menu mobile =====
+  //  Menu mobile 
   const toggle = document.getElementById('menu-toggle');
   const mobileNav = document.getElementById('mobile-nav');
   if (toggle && mobileNav) {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== Rolagem suave para âncoras internas =====
+  // Rolagem suave para âncoras internas
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {
       const id = a.getAttribute('href');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== Formulário de contato =====
+  //  Formulário de contato 
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
   if (form) {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== Carrinho de compras =====
+  //  Carrinho de compras
   let total = 0;
   let metodoPagamento = null;
   const totalElement = document.getElementById('total-carrinho');
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     buyBtn.addEventListener('click', () => {
       const priceEl = card.querySelector('strong, .price');
       const priceText = priceEl ? priceEl.textContent : '';
-      // Extrai número BR (ex.: "R$ 12,50")
+      // Extrai número de BRL (ex.: "R$ 12,50")
       const numeric = priceText.replace(/[^\d,.-]/g, '').replace(/\.(?=\d{3}(\D|$))/g, '').replace(',', '.');
       const price = parseFloat(numeric) || 0;
       total += price;
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== Donut girando no scroll (com proteção) =====
+  //  Donut girando no scroll
   const donut = document.getElementById('donut');
   if (donut) {
     let lastScrollY = window.scrollY;
